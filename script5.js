@@ -1,6 +1,6 @@
 let sum = 0
 while (true) {
-    let number = prompt("Введіть число")
+    let number = prompt("Введіть число кроків")
     if (number === null) {
         break
     } 
@@ -10,4 +10,4 @@ while (true) {
     number = Number(number)
     sum += number
 }
-console.log("Сума =", sum)
+console.log("Сума кроків =", sum)
