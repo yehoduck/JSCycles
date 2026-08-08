@@ -10,8 +10,10 @@ while (true) {
         if (gNumber === rNumber) {
             alert("Ви вгадали! Правильне число - " + gNumber)
             break
+        } else if (Math.abs(gNumber - rNumber) > 3) {
+            alert("Холодно")
         } else {
-            alert("Неправильно!")
+            alert("Гаряче")
         }
     }
 }
