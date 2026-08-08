@@ -1,14 +1,17 @@
 const rNumber = (Math.floor(Math.random() * 20) + 1)
-let cycle
-while (cycle !== rNumber) {
-    let gNumber = Number(prompt("Введіть число від 1 до 20."))
-    if (gNumber === 0) {
+while (true) {
+    let gNumber = prompt("Введіть число від 1 до 20.") 
+    if (gNumber === null) {
         break 
-    }
-    cycle = gNumber
-    if (gNumber === rNumber) {
-        alert("Ви вгадали! Правильне число - " + gNumber)
+    } else if (gNumber === "") {
+        alert("Ви нічого не ввели. Спробуйте ще раз")
     } else {
-        alert("Неправильно!")
+        gNumber = Number(gNumber)
+        if (gNumber === rNumber) {
+            alert("Ви вгадали! Правильне число - " + gNumber)
+            break
+        } else {
+            alert("Неправильно!")
+        }
     }
 }
